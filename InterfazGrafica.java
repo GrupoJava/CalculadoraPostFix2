@@ -24,6 +24,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
 
 
 /**
@@ -51,6 +52,12 @@ public class InterfazGrafica {
 		private JButton btnSeleccionarArchivo;
 		private JButton buttonCalcular;
 		private JTextArea textArea;
+		private JRadioButton rdbtnListaCircular;
+		private JRadioButton rdbtnDoblementeEncadenada;
+		private JRadioButton rdbtnListaSimple;
+		private JRadioButton rdbtnArreglo;
+		private JRadioButton rdbtnArraylist;
+		private JRadioButton rdbtnLista;
 		public static void main(String[] args) {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -75,7 +82,7 @@ public class InterfazGrafica {
 		 */
 		public void initialize(){
 			frame = new JFrame();
-			frame.setBounds(100, 100, 622, 381);
+			frame.setBounds(100, 100, 665, 381);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.getContentPane().setLayout(null);
 			
@@ -104,8 +111,42 @@ public class InterfazGrafica {
 			frame.getContentPane().add(lblResultados);
 			
 			textArea = new JTextArea();
-			textArea.setBounds(20, 218, 378, 113);
+			textArea.setBounds(20, 218, 306, 113);
 			frame.getContentPane().add(textArea);
+			
+			rdbtnLista = new JRadioButton("Lista");
+			rdbtnLista.setBounds(332, 219, 109, 23);
+			rdbtnLista.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnLista);
+			
+			rdbtnArraylist = new JRadioButton("ArrayList");
+			rdbtnArraylist.setSelected(true);
+			rdbtnArraylist.setBounds(332, 248, 109, 23);
+			rdbtnArraylist.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnArraylist);
+			
+			rdbtnArreglo = new JRadioButton("Arreglo");
+			rdbtnArreglo.setBounds(332, 274, 109, 23);
+			rdbtnArreglo.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnArreglo);
+			
+			rdbtnListaSimple = new JRadioButton("Simplemente Encadenada");
+			rdbtnListaSimple.setBounds(443, 219, 200, 23);
+			rdbtnListaSimple.setEnabled(false);
+			rdbtnListaSimple.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnListaSimple);
+			
+			rdbtnDoblementeEncadenada = new JRadioButton("Doblemente Encadenada");
+			rdbtnDoblementeEncadenada.setBounds(443, 248, 200, 23);
+			rdbtnDoblementeEncadenada.setEnabled(false);
+			rdbtnDoblementeEncadenada.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnDoblementeEncadenada);
+			
+			rdbtnListaCircular = new JRadioButton("Lista Circular");
+			rdbtnListaCircular.setBounds(443, 274, 109, 23);
+			rdbtnListaCircular.setEnabled(false);
+			rdbtnListaCircular.addActionListener(new Evento());
+			frame.getContentPane().add(rdbtnListaCircular);
 			
 			fc = new JFileChooser();
 			
@@ -130,14 +171,48 @@ public class InterfazGrafica {
 			            file = fc.getSelectedFile();
 			            textField.setText(file.getAbsolutePath());
 			        } 
-				}else{
+				}else if(a.getSource()==buttonCalcular){
 					try {
 						calculadora.readFile(file.getAbsolutePath());
 						textArea.setText(String.valueOf("El resultado final de su operacion es: " +calculadora.calcular()));
 					} catch ( Exception e) {
 						e.printStackTrace();
 					}
-				}
+				}else if(a.getSource()==rdbtnLista){
+										
+					/*Desactivando el resto de botones*/
+					rdbtnListaSimple.setEnabled(true);
+					rdbtnDoblementeEncadenada.setEnabled(true);
+					rdbtnListaCircular.setEnabled(true);
+					rdbtnArreglo.setSelected(false);
+					rdbtnArraylist.setSelected(false);
+				}else if(a.getSource()==rdbtnArreglo){
+					/*Desactivando el resto de botones*/
+					rdbtnArraylist.setSelected(false);
+					rdbtnLista.setSelected(false);
+					rdbtnListaSimple.setEnabled(false);
+					rdbtnDoblementeEncadenada.setEnabled(false);
+					rdbtnListaCircular.setEnabled(false);
+				}else if(a.getSource()==rdbtnArraylist){
+					/*Desactivando el resto de botones*/
+					rdbtnArreglo.setSelected(false);
+					rdbtnLista.setSelected(false);
+					rdbtnListaSimple.setEnabled(false);
+					rdbtnDoblementeEncadenada.setEnabled(false);
+					rdbtnListaCircular.setEnabled(false);
+				}else if(a.getSource()==rdbtnListaSimple){
+					/*Desactivando el resto de botones*/
+					rdbtnDoblementeEncadenada.setSelected(false);
+					rdbtnListaCircular.setSelected(false);
+				}else if(a.getSource()==rdbtnDoblementeEncadenada){
+					/*Desactivando el resto de botones*/
+					rdbtnListaSimple.setSelected(false);
+					rdbtnListaCircular.setSelected(false);
+				}else if(a.getSource()==rdbtnListaCircular){
+					/*Desactivando el resto de botones*/
+					rdbtnListaSimple.setSelected(false);
+					rdbtnDoblementeEncadenada.setSelected(false);
+				}		
 			}
 		}
 }
