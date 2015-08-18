@@ -58,6 +58,7 @@ public class InterfazGrafica {
 		private JRadioButton rdbtnArreglo;
 		private JRadioButton rdbtnArraylist;
 		private JRadioButton rdbtnLista;
+		private int metodo=1;
 		public static void main(String[] args) {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -173,21 +174,24 @@ public class InterfazGrafica {
 			        } 
 				}else if(a.getSource()==buttonCalcular){
 					try {
+						calculadora.seleccionarMetodo(metodo);
 						calculadora.readFile(file.getAbsolutePath());
 						textArea.setText(String.valueOf("El resultado final de su operacion es: " +calculadora.calcular()));
 					} catch ( Exception e) {
 						e.printStackTrace();
 					}
 				}else if(a.getSource()==rdbtnLista){
-										
+					metodo=3;
 					/*Desactivando el resto de botones*/
 					rdbtnListaSimple.setEnabled(true);
+					rdbtnListaSimple.setSelected(true);
 					rdbtnDoblementeEncadenada.setEnabled(true);
 					rdbtnListaCircular.setEnabled(true);
 					rdbtnArreglo.setSelected(false);
 					rdbtnArraylist.setSelected(false);
 				}else if(a.getSource()==rdbtnArreglo){
 					/*Desactivando el resto de botones*/
+					metodo=2;
 					rdbtnArraylist.setSelected(false);
 					rdbtnLista.setSelected(false);
 					rdbtnListaSimple.setEnabled(false);
@@ -195,6 +199,7 @@ public class InterfazGrafica {
 					rdbtnListaCircular.setEnabled(false);
 				}else if(a.getSource()==rdbtnArraylist){
 					/*Desactivando el resto de botones*/
+					metodo=1;
 					rdbtnArreglo.setSelected(false);
 					rdbtnLista.setSelected(false);
 					rdbtnListaSimple.setEnabled(false);
@@ -202,14 +207,17 @@ public class InterfazGrafica {
 					rdbtnListaCircular.setEnabled(false);
 				}else if(a.getSource()==rdbtnListaSimple){
 					/*Desactivando el resto de botones*/
+					metodo=3;
 					rdbtnDoblementeEncadenada.setSelected(false);
 					rdbtnListaCircular.setSelected(false);
 				}else if(a.getSource()==rdbtnDoblementeEncadenada){
 					/*Desactivando el resto de botones*/
+					metodo=4;
 					rdbtnListaSimple.setSelected(false);
 					rdbtnListaCircular.setSelected(false);
 				}else if(a.getSource()==rdbtnListaCircular){
 					/*Desactivando el resto de botones*/
+					metodo=5;
 					rdbtnListaSimple.setSelected(false);
 					rdbtnDoblementeEncadenada.setSelected(false);
 				}		

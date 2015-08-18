@@ -25,7 +25,7 @@ import java.io.IOException;
  * 
  * En esta clase se utilizan los siguietnes atributos:
  * <MyStr>: para unir la cadena de caracteres
- * <MySta>: una nueva Pila.
+ * <pila>: una nueva Pila.
  * <op1>: el primer operando
  * <op2>: el segundo operando
  * <res>: el resultado de la operacion
@@ -39,7 +39,7 @@ import java.io.IOException;
  */
 public class Calculadora<P> implements ADTCalculadora<P>{
 	private String MyStr;
-	private Stack<Integer> MySta;
+	private Pila<Integer> pila;
 	private Integer op1;
 	private Integer op2;
 	private Integer res;
@@ -50,14 +50,13 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 	 * <MyStr>: para unir la cadena de caracteres, inicia vacío
 	 * <op1>: el primer operando, inicia en cero
 	 * <op2>: el segundo operando, inicia en cero
-	 * <MySta>: una nueva Pila, tipo Stack
+	 * <pila>: una nueva Pila, tipo Stack
 	 * 
 	 */
 	public Calculadora() {
 		MyStr = "";		
 		op1 = 0;
 		op2 = 0;
-		MySta = new Stack<Integer>();	
 	}
 
 	@Override
@@ -76,7 +75,6 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 			}
 	        MyStr = sb.toString();
 	        MyStr = MyStr.trim().replace(" ", "");
-	        System.out.println(MyStr);
 
 	}
 
@@ -86,13 +84,13 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 		for (int i=0;i<=(MyStr.length()-1);i++)
 		{
 			CharSequence MyChar = "" + MyStr.charAt(i);
-			if (numeros.contains(MyChar))
-				MySta.push(Integer.parseInt(MyChar.toString()));
-			else 
+			if (numeros.contains(MyChar)){
+				pila.push(Integer.parseInt(MyChar.toString()));
+			}else 
 			{
 				String a = MyChar.toString();
-				op1 = (Integer) MySta.pop();
-				op2 = (Integer) MySta.pop();
+				op1 = (Integer) pila.pop();
+				op2 = (Integer) pila.pop();
 				if(a.equals("+"))
 					res = op1 + op2;
 				else
@@ -109,10 +107,30 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 					res = op2 ^ op1;
 				else
 					throw new Exception("Se ingreso un caracter desconocido!");
-				MySta.push(res);
+				pila.push(res);
 			}
 		}
-		return (P) MySta.peek();
+		return (P) pila.peek();
+	}
+
+	public void seleccionarMetodo(int metodo) {
+		switch(metodo){
+		case 1:
+			pila= new Arraylist<Integer>();
+			break;
+		case 2:
+			pila= new MVector<Integer>();	
+			break;
+		case 3:
+			pila = new SimplementeEnlazada<Integer>();
+			break;
+		case 4:
+			pila = new DoblementeEnlazada<Integer>();
+			break;
+		case 5:
+			pila = new Circular<Integer>();
+			break;
+		}
 	}
 	
 }

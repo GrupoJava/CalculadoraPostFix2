@@ -1,36 +1,15 @@
-public class DoblementeEnlazada <E> extends SimplementeEnlazada <E>{
+public class DoblementeEnlazada <E> extends Lista <E>{
 
-	
 	protected NodoDoble <E> head = null;
 	protected NodoDoble <E> tail = null;
 	
-	public DoblementeEnlazada(E v) {
-		super(v);
-		
+	public DoblementeEnlazada() {
+		cont = 0;
+		head = null;
 	}
 	
-
 	public int size() {
 		return cont;
-	}
-	
-	public void addFirst(E value) { //
-		head = new NodoDoble<E>(value) ;
-		if (tail == null){
-			tail = head; 
-		}
-		cont++;
-	}
-	
-	public E removeFirst() {
-		
-		if (size()!=0){
-			NodoDoble<E> temp = (NodoDoble<E>) head.getNext();
-			NodoDoble<E> temp2 =(NodoDoble<E>) head;
-			head = temp;
-			return (E) temp2;
-		}
-		return null;
 	}
 	
 	public void addLast(E value) { //
@@ -52,11 +31,6 @@ public class DoblementeEnlazada <E> extends SimplementeEnlazada <E>{
 		
 	}
 	
-
-	
-	public E getFirst() {
-		return head.getValor();
-	}
 	
 	public E getLast() {
 		return tail.getValor();
@@ -79,10 +53,52 @@ public class DoblementeEnlazada <E> extends SimplementeEnlazada <E>{
 		return false;
 	}
 
+	@Override
+	public void empty() {
+		cont=0;
+		head=null;
+	}
 
-	
-	
-	
-	
+	@Override
+	public boolean isEmpty() {
+		return cont==0;
+	}
 
+	@Override
+	public void push(E x) {
+		if(head==null){
+			head = new NodoDoble<E>(x) ;
+		}else{
+			tail=head;
+			head= new NodoDoble<E>(x) ;
+			head.setNext(tail);
+			tail.setPrevious(head);
+			
+		}
+		cont++;
+	}
+
+	@Override
+	public E pop() throws Exception {
+		
+		if (head!=null && size()!=0){
+			NodoDoble<E> temp;
+			temp=head;
+			head.setNext(null);
+			head=tail;
+			head.setPrevious(null);
+			if(head.getNext()!=null){
+				tail=(NodoDoble<E>) head.getNext();
+			}
+			cont--;
+			return (E) temp.getValor();
+		}
+		cont--;
+		return null;
+	}
+
+	@Override
+	public E peek() throws Exception {
+		return head.getValor();
+	}
 }

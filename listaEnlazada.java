@@ -1,21 +1,11 @@
-public interface listaEnlazada<E>{
-
-	public int size();
+public abstract class Lista<E> extends Pila<E>{
+	protected int cont=0;
+	public abstract E removeLast();
 	
-	public void addFirst(E value);
+	public abstract void addLast(E value);
 	
-	public E removeFirst();
+	public abstract E getLast();
 	
-	public E removeLast();
-	
-	public void addLast(E value);
-	
-	public E getFirst();
-	
-	public E getLast();
-	
-	public boolean contains(E value);
-
-
+	public abstract boolean contains(E value);
 
 }

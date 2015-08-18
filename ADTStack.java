@@ -32,7 +32,7 @@
  *
  * @param <E> para utilizar cualquier tipo de dato
  */
-public interface ADTStack<E> {
+public abstract class Pila<E> {
 	
 	/**
 	 * Este método es el encargado de vaciar la pila. 
@@ -40,7 +40,7 @@ public interface ADTStack<E> {
 	 * de la pila sin importar el orden en que hayan entrado.
 	 * Simplemente borra todos los datos.
 	 */
-	public void empty();
+	public abstract void empty();
 	
 	/**
 	 * Con este método se puede verificar excusivametne si la pila está vacía.
@@ -48,7 +48,7 @@ public interface ADTStack<E> {
 	 * @return true únicamente si la pila no tiene ningún elmento
 	 * 		   false de manera opuesta
 	 */
-	public boolean isEmpty();
+	public abstract boolean isEmpty();
 	
 	/**
 	 * Este método permite agregar un elemento a la pila.
@@ -58,7 +58,7 @@ public interface ADTStack<E> {
 	 * 
 	 * @param x es el elemento que será agregado al final de la pila
 	 */
-	public void push(E x) ;
+	public abstract void push(E x) ;
 	
 	/**
 	 * Este métdo permite recuperar el último elemento ingresado a la pila.
@@ -69,14 +69,14 @@ public interface ADTStack<E> {
 	 * @throws Exception errores en ejecución cuando se llama al método
 	 * 		   			 Retorna un error si la pila está vacía
 	 */
-	public E pop() throws Exception;
+	public abstract E pop() throws Exception;
 	
 	/**
 	 * Con este método se puede saber la cantidad de componentes que tiene la pila luego de
 	 * estarle agretando elementos.
 	 * @return el tamaño de la pila. Este tamaño será el número de elementos que tiene la pila.
 	 */
-	public int size();
+	public abstract int size();
 	
 	/**
 	 * Con este método se puede obtener el último componente de la pila sin sacarlo de dicha pila. 
@@ -90,6 +90,6 @@ public interface ADTStack<E> {
 	 * @throws Exception errores en ejecución cuando se llama al método
 	 * 		   			 Retorna un error si la pila está vacía
 	 */
-	public E peek() throws Exception;
+	public abstract E peek() throws Exception;
 	
 }

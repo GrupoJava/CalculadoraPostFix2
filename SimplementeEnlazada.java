@@ -1,32 +1,13 @@
-public class SimplementeEnlazada<E> implements listaEnlazada<E>{
+public class SimplementeEnlazada<E> extends Lista<E>{
 	
-	protected int cont;
-	protected Nodo<E> head; //Primer elemento
-	
-	
-	public SimplementeEnlazada(E v) {
+	private Nodo<E> head=null;
+	public SimplementeEnlazada() {
 		cont = 0;
 		head = null;
 		
 		// TODO Auto-generated constructor stub
 	}
 
-	public int size() {
-		return cont;
-	}
-	
-	public void addFirst(E value) {
-		head = new Nodo<E>(value) ;
-		cont++;
-	}
-	
-	public E removeFirst() {
-		Nodo <E> temp = head;
-		head = head.getNext();
-		cont--;
-		return temp.getValor();
-	}
-	
 	public E removeLast() {
 		Nodo <E> finger = head;
 		Nodo <E> previous = null;
@@ -57,10 +38,7 @@ public class SimplementeEnlazada<E> implements listaEnlazada<E>{
 		else head = temp;
 		cont ++;
 	}
-	
-	public E getFirst() {
-		return head.getValor();
-	}
+
 	
 	public E getLast() {
 		Nodo <E> finger = head;
@@ -79,6 +57,49 @@ public class SimplementeEnlazada<E> implements listaEnlazada<E>{
 			finger = finger.getNext();
 		}
 		return finger != null;
+	}
+
+	@Override
+	public void empty() {
+		cont=0;
+		head=null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return cont==0;
+	}
+
+	@Override
+	public void push(E x) {
+		System.out.println("VALOR ENTRANDO"+x);
+		Nodo<E> temporal = head;
+		head = new Nodo<E>(x) ;
+		head.setNext(temporal);
+		cont++;
+	}
+
+	@Override
+	public E pop() throws Exception {
+		System.out.println(head);
+		Nodo <E> temp = head;
+		if(head!=null && head.getNext()!=null){
+			head = head.getNext();
+		}else{
+			head=null;
+		}
+		cont--;
+		return temp.getValor();
+	}
+
+	@Override
+	public E peek() throws Exception {
+		return head.getValor();
+	}
+
+	@Override
+	public int size() {
+		return cont;
 	}
 
 

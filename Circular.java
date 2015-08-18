@@ -1,7 +1,6 @@
-public class Circular<E> implements listaEnlazada<E>{
+public class Circular<E> extends Lista<E>{
 	
 	Nodo<E> ultimo = null;
-	int cont;
 	
 	public Circular(){
 		
@@ -11,35 +10,6 @@ public class Circular<E> implements listaEnlazada<E>{
 	
 	public int size() {
 		return cont;
-	}
-	
-	public void addFirst(E value) {
-		Nodo<E> temp = new Nodo<E>(value);
-		
-		if (ultimo == null){
-			
-			ultimo = temp;
-			ultimo.setNext(ultimo);
-			
-		}
-		else
-		{
-			temp.setNext(ultimo.getNext());
-			ultimo.setNext(temp);
-		}
-		
-		
-		cont++;
-	}
-	
-	public E removeFirst() {
-		
-		Nodo<E> temp;
-		Nodo<E> temp2;
-		temp2 = ultimo.getNext();
-		temp =  ultimo.getNext().getNext();
-		ultimo.setNext(temp);
-		return (E) temp2;
 	}
 	
 	public E removeLast() {
@@ -64,18 +34,6 @@ public class Circular<E> implements listaEnlazada<E>{
 		return (E) temp;
 	}
 	
-	public void addLast(E value) {
-	}
-	
-	public E getFirst() {
-		
-		if (cont!=0){
-			return (E) ultimo.getNext();
-		}
-		
-		return null;
-	}
-	
 	public E getLast() {
 		
 		Nodo<E> pointer = ultimo;
@@ -96,6 +54,60 @@ public class Circular<E> implements listaEnlazada<E>{
 		}
 		
 		return false;
+	}
+
+	@Override
+	public void empty() {
+		cont=0;
+		ultimo=null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return cont==0;
+	}
+
+	@Override
+	public void push(E x) {
+		Nodo<E> temp = new Nodo<E>(x);
+		
+		if (ultimo == null){
+			
+			ultimo = temp;
+			ultimo.setNext(ultimo);
+			
+		}
+		else
+		{
+			temp.setNext(ultimo.getNext());
+			ultimo.setNext(temp);
+		}
+		cont++;
+	}
+
+	@Override
+	public E pop() throws Exception {
+		Nodo<E> temp;
+		Nodo<E> temp2;
+		temp2 = ultimo.getNext();
+		temp =  ultimo.getNext().getNext();
+		ultimo.setNext(temp);
+		return (E) temp2.getValor();
+	}
+
+	@Override
+	public E peek() throws Exception {
+		if (cont!=0){
+			return (E) ultimo.getNext().getValor();
+		}
+		
+		return null;
+	}
+
+	public void addLast(E value) {
+		
+		
 	}
 
 

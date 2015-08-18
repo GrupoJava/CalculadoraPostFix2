@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructura de Datos
@@ -9,7 +7,7 @@ import java.util.ArrayList;
  *
  */
 
-
+import java.util.Vector;
 
 /**
  * 
@@ -29,56 +27,51 @@ import java.util.ArrayList;
  *
  * @param <Integer> para recibir datos numéricos
  */
-public class Arraylist<E> extends Pila<Integer> {
+public class MVector<Integer> extends Pila<Integer> {
 	
-	private ArrayList <Integer> arrayList;
+	private Vector <Integer> vector;
 	
 	/**
 	 * Este es el constructor de <Stack> y crea un nuevo vector
 	 * de la Clase <Vector>. 
 	 * Crea un Objeto:
-	 * <arrayList> que será la nueva pila
+	 * <vector> que será la nueva pila
 	 * La inicializa y la vacía.
 	 */
-	public Arraylist() {
-		this.arrayList = new ArrayList <Integer>();	
-		arrayList.clear();
+	public MVector() {
+		this.vector = new Vector <Integer>();	
+		vector.clear();
 	}
 
-	@Override
 	public void empty() {
-		arrayList.clear();		
+		vector.clear();		
 	}
 
-	@Override
+
 	public boolean isEmpty() {
-		return arrayList.isEmpty();
+		return vector.isEmpty();
 	}
 
-	@Override
 	public int size() {
-		return arrayList.size();
+		return vector.size();
 	}
 	
-	@Override
 	public Integer pop() throws Exception {
-		if (arrayList.isEmpty())
+		if (vector.isEmpty())
 			throw new Exception("Vector vacio!");
 		else
-			return arrayList.remove(arrayList.size()-1);
+			return vector.remove(vector.size()-1);
 	}
 
-	@Override
 	public Integer peek() throws Exception {
-		if (arrayList.isEmpty())
-			throw new Exception("ArrayList vacio!");
+		if (vector.isEmpty())
+			throw new Exception("Vector vacio!");
 		else
-			return arrayList.get(arrayList.size()-1);
+			return vector.lastElement();
 	}
 
-	@Override
 	public void push(Integer x) {
-		arrayList.add(x);
+		vector.add(x);
 	}
 
 }
