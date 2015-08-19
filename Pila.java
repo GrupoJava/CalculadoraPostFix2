@@ -33,7 +33,7 @@
  * @param <E> para utilizar cualquier tipo de dato
  */
 public abstract class Pila<E> {
-	
+	/*JAKLSFJDKLSDJFKLSJDFKLJ*/
 	/**
 	 * Este método es el encargado de vaciar la pila. 
 	 * Con este método se pueden elminar todos los elementos
