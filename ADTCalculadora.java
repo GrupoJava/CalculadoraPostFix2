@@ -14,10 +14,10 @@ import java.io.FileNotFoundException;
 
 
 /**
- * Esta es la interfaz <ADTCalculadora> creada por los propios alumnos para
+ * Esta es la interfaz ADTCalculadora creada por los propios alumnos para
  * utilizarlo en toda la sección. Practiacamente de esta interfaz se podrán
  * hacer la lectura del archivo y realizar las operaciones. Esta clase recibe
- * datos tipo string <P>
+ * datos tipo string P
  *
  * @param <P>	para que los datos sean String
  * 

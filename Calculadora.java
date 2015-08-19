@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * La clase <Calculadora> implementa la interfaz <ADTCalculadora>. 
+ * La clase Calculadora implementa la interfaz ADTCalculadora. 
  * Reciben archivos tipo String. Con esta clase se puede recibir un
  * archivo y leerlo. Lanza errores sino se encuentra el archivo o es
  * inaccesible. Luego de leerlo analiza los datos que trae. Los convierte 
@@ -24,12 +24,12 @@ import java.io.IOException;
  * dependiendo el operador que esté en la cadena y dependiendo su jerarquía.
  * 
  * En esta clase se utilizan los siguietnes atributos:
- * <MyStr>: para unir la cadena de caracteres
- * <pila>: una nueva Pila.
- * <op1>: el primer operando
- * <op2>: el segundo operando
- * <res>: el resultado de la operacion
- * <numeros>: los números que deben estar contenidos en la cadena de caracteres
+ * MyStr: para unir la cadena de caracteres
+ * pila: una nueva Pila.
+ * op1: el primer operando
+ * op2: el segundo operando
+ * res: el resultado de la operacion
+ * numeros: los números que deben estar contenidos en la cadena de caracteres
  * 
  * @author André Rodas
  * @author Rudy Garrido 
@@ -47,10 +47,10 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 	
 	/**
 	 * Este es el constructor de la Clase. Crea cuatro objetos que son
-	 * <MyStr>: para unir la cadena de caracteres, inicia vacío
-	 * <op1>: el primer operando, inicia en cero
-	 * <op2>: el segundo operando, inicia en cero
-	 * <pila>: una nueva Pila, tipo Stack
+	 * MyStr: para unir la cadena de caracteres, inicia vacío
+	 * op1: el primer operando, inicia en cero
+	 * op2: el segundo operando, inicia en cero
+	 * pila: una nueva Pila, tipo Stack
 	 * 
 	 */
 	public Calculadora() {

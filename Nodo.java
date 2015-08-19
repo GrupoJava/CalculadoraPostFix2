@@ -1,3 +1,11 @@
+
+/**
+ * @author Rudyg Garrido
+ * @author Yosemite Melendez
+ * 
+ *
+ * @param <E>
+ */
 public class Nodo<E> {
 	
 	protected E valor;

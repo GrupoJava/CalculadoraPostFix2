@@ -12,23 +12,23 @@
 
 
 /**
- * Esta es la interfaz <ADTStack> creada por los propios alumnos para
+ * Esta es la interfaz ADTStack creada por los propios alumnos para
  * utilizarlo en toda la sección. Con esta interfaz se busca implementar una
  * pila y realizar las funciones principales: push y pop de datos. 
  * Con esta interfaz se busca recibir cualquier tipo de dato ya que se especifica
- * que se utilizará en posteriores códigos y por eso es la razón que sea tipo <E>
- * aunque luego se utilice <Integer> ya que por ahora interesa relizar operaciones
+ * que se utilizará en posteriores códigos y por eso es la razón que sea tipo E
+ * aunque luego se utilice Integer ya que por ahora interesa relizar operaciones
  * numéricas básicas.
  * Se realiza una implementación de pila con un vector de tamaño variable utilizando
- * la Clase <Vector>
+ * la Clase Vector
  * 
  * Además utiliza los siguientes métodos:
- * <empty> vaciar pila
- * <isEmptiy> verifica si está vacía
- * <push> guarda datos
- * <pop> saca datos
- * <size> tamaño de la pila
- * <peek> obtener el valor más alto de la pila
+ * empty: vaciar pila
+ * isEmptiy: verifica si está vacía
+ * push: guarda datos
+ * pop: saca datos
+ * size: tamaño de la pila
+ * peek: obtener el valor más alto de la pila
  *
  * @param <E> para utilizar cualquier tipo de dato
  */

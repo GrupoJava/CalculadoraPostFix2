@@ -1,3 +1,10 @@
+
+/**
+ * Clase circular es una Lista. Su característica principal es que
+ * el último elemento apunta a el primer elemento. 
+ *
+ * @param <E>
+ */
 public class Circular<E> extends Lista<E>{
 	
 	Nodo<E> ultimo = null;

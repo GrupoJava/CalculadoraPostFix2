@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 /**
  * 
- * La clase <Stack> implementa la clase <ADTStack>.
+ * La clase Stack implementa la clase ADTStack.
  * Utiliza datos tipo Integer. Con esta clase se pretende utilizar
- * la clase <Vector> la cual tiene opciones predefinidas que harán
+ * la clase Vector la cual tiene opciones predefinidas que harán
  * que se cree un vector de datos que tendrá la forma de una pila
  * por los métodos definidos para esta clase. Gracias a esta clase
  * se harán operaciones en notación Postfix en <Calculadora>
@@ -35,9 +35,9 @@ public class Arraylist<E> extends Pila<Integer> {
 	
 	/**
 	 * Este es el constructor de <Stack> y crea un nuevo vector
-	 * de la Clase <Vector>. 
+	 * de la Clase Vector. 
 	 * Crea un Objeto:
-	 * <arrayList> que será la nueva pila
+	 * arrayList que será la nueva pila
 	 * La inicializa y la vacía.
 	 */
 	public Arraylist() {

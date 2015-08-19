@@ -28,14 +28,13 @@ import javax.swing.JRadioButton;
 
 
 /**
- * Esta es la clase <InterfazGrafica> y muestra una Interfaz
+ * Esta es la clase InterfazGrafica y muestra una Interfaz
  * mas amigable con el usuario al tener un botón para buscar el
  * archivo deseado para realizar las operacinoes. Busca el archivo
  * y tienen otro botón que permite realizar el cálculo de la operacion.
  * Por útltimo, tiene un área de texto en el cual muestra el resultado
  * de la operación.
  * 
- * @author André Rodas
  * @author Rudy Garrido 
  * @author Yosemite Meléndez
  *
@@ -154,10 +153,10 @@ public class InterfazGrafica {
 			
 		}
 		/**
-		 * Clase interna <Evento> para poder obtener el botón al cual se le realiza 
+		 * Clase interna Evento para poder obtener el botón al cual se le realiza 
 		 * la acción y asi realizar la operación deseada por el usuario.
-		 * Un evento en <btnSeleccionarArchivo> permite abrir el buscador de archivos
-		 * Un envento en <btnCalcular> permite realizar el cálculo de la operacion
+		 * Un evento en btnSeleccionarArchivo permite abrir el buscador de archivos
+		 * Un envento en btnCalcular permite realizar el cálculo de la operacion
 		 *
 		 */
 		private class Evento implements ActionListener{
