@@ -1,6 +1,33 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructura de Datos
+ * Sección: 10
+ * 20/08/2015
+ * Hoja de Trabajo 4
+ *
+ */
+
+/**
+ * La calse SimplementeEnlazada es una lista que, como su nombre 
+ * lo indica es de enlace simple. Solo se puede apuntar al siguiente
+ * nodo y no se puede apuntar al anterior ni al ultimo. Hay un atritubo
+ * que se llama head que apunta al primer nodo de la lista y ayudará a
+ * encontrar valores siguientes o apuntar a otros nodos.
+ * 
+ * @author Rudy Garrido
+ * @author Yosemite Meléndez
+ *
+ * @param <E>
+ */
 public class SimplementeEnlazada<E> extends Lista<E>{
 	
 	private Nodo<E> head=null;
+	
+	
+	/**
+	 * Este es el constructor de objetos. Crea un count que lo inicializa
+	 * en cero y head que al inicio es null porque la lista está vacía
+	 */
 	public SimplementeEnlazada() {
 		cont = 0;
 		head = null;

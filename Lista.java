@@ -1,3 +1,11 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructura de Datos
+ * Sección: 10
+ * 20/08/2015
+ * Hoja de Trabajo 4
+ *
+ */
 
 /**
  * Esta es la clase lista que hace referenca a que es una Pila. 
@@ -38,6 +46,13 @@ public abstract class Lista<E> extends Pila<E>{
 	public abstract E getLast();
 	
 	
+	
+	/**
+	 * Este método realiza un recorrido por la lista para verificar si
+	 * cierto valor está contenido dentro de la lista.
+	 * @param value el valor que se quiere verificar dentro de la lista
+	 * @return true si lo contiene
+	 */
 	public abstract boolean contains(E value);
 
 }

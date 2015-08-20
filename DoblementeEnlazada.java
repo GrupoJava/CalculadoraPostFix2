@@ -1,8 +1,34 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructura de Datos
+ * Sección: 10
+ * 20/08/2015
+ * Hoja de Trabajo 4
+ *
+ */
+
+/**
+ * La calse DoblementeEnlazada es una lista que, como su nombre 
+ * lo indica es de enlace doble. Se caraceteriza porque peude apuntar
+ * tanto al nodo anterior como al siguiente. Hay un atritubo que se llama 
+ * head que apunta al primer nodo de la lista y otro que es tail que apunta
+ * al último elemento de la lista. 
+ * @author Rudy Garrido
+ * @author Yosemite
+ *
+ * @param <E>
+ */
 public class DoblementeEnlazada <E> extends Lista <E>{
 
 	protected NodoDoble <E> head = null;
 	protected NodoDoble <E> tail = null;
 	
+	/**
+	 * Este es el constructor de objetos. Crea un count que lo inicializa
+	 * en cero y head que al inicio es null porque la lista está vacía.
+	 * tail debe considerarse en un caso particular, porque si está vacía
+	 * head = tail = null y si la lista es uno head = tail. 
+	 */
 	public DoblementeEnlazada() {
 		cont = 0;
 		head = null;

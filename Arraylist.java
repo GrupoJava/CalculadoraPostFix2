@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructura de Datos
  * Sección: 10
- * 30/07/2015
- * Hoja de Trabajo 2
+ * 20/08/2015
+ * Hoja de Trabajo 4
  *
  */
 
@@ -13,15 +13,13 @@ import java.util.ArrayList;
 
 /**
  * 
- * La clase Stack implementa la clase ADTStack.
+ * La clase Arraylist es una Pila.
  * Utiliza datos tipo Integer. Con esta clase se pretende utilizar
- * la clase Vector la cual tiene opciones predefinidas que harán
- * que se cree un vector de datos que tendrá la forma de una pila
+ * la clase ArrayList y Pila la cual tiene opciones predefinidas que harán
+ * que se cree un Arraylist que tendrá la forma de una pila
  * por los métodos definidos para esta clase. Gracias a esta clase
- * se harán operaciones en notación Postfix en <Calculadora>
- * La idea de la pila es realizar push y pop de datos, verificar si
- * la pila está vacía y mostrarlo en pantalla así como vaciar la pila
- * u obtener su último dato.
+ * se harán operaciones en notación Postfix en Calculadora si es 
+ * seleccionada entre las opciones
  * 
  * @author André Rodas
  * @author Rudy Garrido 
@@ -34,10 +32,10 @@ public class Arraylist<E> extends Pila<Integer> {
 	private ArrayList <Integer> arrayList;
 	
 	/**
-	 * Este es el constructor de <Stack> y crea un nuevo vector
-	 * de la Clase Vector. 
+	 * Este es el constructor de Arraylist y crea un nuevo arraylist
+	 * de la Clase ArrayList
 	 * Crea un Objeto:
-	 * arrayList que será la nueva pila
+	 * arrayList que será el nuevo ArrayList
 	 * La inicializa y la vacía.
 	 */
 	public Arraylist() {

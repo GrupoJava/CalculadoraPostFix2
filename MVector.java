@@ -2,24 +2,24 @@
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructura de Datos
  * Sección: 10
- * 30/07/2015
- * Hoja de Trabajo 2
+ * 20/08/2015
+ * Hoja de Trabajo 4
  *
  */
+
 
 import java.util.Vector;
 
 /**
  * 
- * La clase <Stack> implementa la clase <ADTStack>.
+ * La clase MVector y es una Pila.
  * Utiliza datos tipo Integer. Con esta clase se pretende utilizar
- * la clase <Vector> la cual tiene opciones predefinidas que harán
+ * la clase Vector y Pila la cual tiene opciones predefinidas que harán
  * que se cree un vector de datos que tendrá la forma de una pila
  * por los métodos definidos para esta clase. Gracias a esta clase
- * se harán operaciones en notación Postfix en <Calculadora>
- * La idea de la pila es realizar push y pop de datos, verificar si
- * la pila está vacía y mostrarlo en pantalla así como vaciar la pila
- * u obtener su último dato.
+ * se harán operaciones en notación Postfix en Calculadora si es 
+ * seleccionada entre las opciones
+ *
  * 
  * @author André Rodas
  * @author Rudy Garrido 
@@ -32,12 +32,13 @@ public class MVector<Integer> extends Pila<Integer> {
 	private Vector <Integer> vector;
 	
 	/**
-	 * Este es el constructor de <Stack> y crea un nuevo vector
-	 * de la Clase <Vector>. 
+	 * Este es el constructor de MVector y crea un nuevo vector
+	 * de la Clase Vector 
 	 * Crea un Objeto:
-	 * <vector> que será la nueva pila
-	 * La inicializa y la vacía.
+	 * vector que será el nuevo vector
+	 * Lo inicializa y la vacía.
 	 */
+	
 	public MVector() {
 		this.vector = new Vector <Integer>();	
 		vector.clear();

@@ -1,6 +1,16 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructura de Datos
+ * Sección: 10
+ * 20/08/2015
+ * Hoja de Trabajo 4
+ *
+ */
 
 /**
- * @author Rudyg Garrido
+ * 
+ * 
+ * @author Rudy Garrido
  * @author Yosemite Melendez
  * 
  *

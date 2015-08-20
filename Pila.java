@@ -12,15 +12,11 @@
 
 
 /**
- * Esta es la interfaz ADTStack creada por los propios alumnos para
- * utilizarlo en toda la sección. Con esta interfaz se busca implementar una
+ * Esta es la clase abstracta Pila basada en ADTstack creada por los propios alumnos para
+ * utilizarlo en toda la sección. Con esta CLASE se busca implementar una
  * pila y realizar las funciones principales: push y pop de datos. 
- * Con esta interfaz se busca recibir cualquier tipo de dato ya que se especifica
- * que se utilizará en posteriores códigos y por eso es la razón que sea tipo E
- * aunque luego se utilice Integer ya que por ahora interesa relizar operaciones
- * numéricas básicas.
- * Se realiza una implementación de pila con un vector de tamaño variable utilizando
- * la Clase Vector
+ * Esta clase puede recibir cualquier tipo de datos numéricos (E)
+ * ya que por ahora interesa relizar operaciones numéricas básicas.
  * 
  * Además utiliza los siguientes métodos:
  * empty: vaciar pila
@@ -80,11 +76,11 @@ public abstract class Pila<E> {
 	
 	/**
 	 * Con este método se puede obtener el último componente de la pila sin sacarlo de dicha pila. 
-	 * Se diferencia del método <pop> porque dicho método saca el valor de la pila. Con este método
+	 * Se diferencia del método pop porque dicho método saca el valor de la pila. Con este método
 	 * el elemento se mantiene dentro de la pila.
 	 * 
 	 * @return Retorna el último componente de la pila. Esta opción no quita el elemento de
-	 * 				   la pila como lo hace el <pop> sino solo se obtiene dicho componente:
+	 * 				   la pila como lo hace el pop sino solo se obtiene dicho componente:
 	 * 				   el dato, el valor que tiene, etc. 
 	 * 
 	 * @throws Exception errores en ejecución cuando se llama al método

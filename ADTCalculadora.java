@@ -42,8 +42,8 @@ public interface ADTCalculadora<P> {
 	/**
 	 * Este método realizará todas las operaciones deseada. Una vez tomada la cadena de 
 	 * caracteres sin espacios, empeiza buscando los operandos y los mete a la pila. 
-	 * Cuando va guardando los elementos a la pila <push> realiza una conversión de String a Integer,
-	 * luego los saca <pop> y ya los opera según la jerarquía de operaciones.
+	 * Cuando va guardando los elementos a la pila push realiza una conversión de String a Integer,
+	 * luego los saca pop y ya los opera según la jerarquía de operaciones.
 	 * Los operandos serán números de un dígito, de 1-9 y las operaciones a realizar son:
 	 * -, +, *, /, ^ Un operador o símbolo distinto de estos cinco, mostrará error. 
 	 * 
