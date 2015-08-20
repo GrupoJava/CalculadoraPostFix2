@@ -2,8 +2,8 @@
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructura de Datos
  * Sección: 10
- * 30/07/2015
- * Hoja de Trabajo 2
+ * 20/08/2015
+ * Hoja de Trabajo 4
  *
  */
 
@@ -113,6 +113,14 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 		return (P) pila.peek();
 	}
 
+	/**
+	 * Este métdo de selleccion es el que permite realizar el uso 
+	 * de patrones: factory. En este caso para seleccionar que implementacion
+	 * desea utilizar el usuario ya sea de stack o de listas.
+	 * @param metodo es el valor enviado para saber que implementaicion quiere utilizar
+	 * 				 el usario para realizar la operacion postfix
+	 * @since Hoja de Trabajo 4 
+	 */
 	public void seleccionarMetodo(int metodo) {
 		switch(metodo){
 		case 1:
