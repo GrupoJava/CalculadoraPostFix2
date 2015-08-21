@@ -65,7 +65,7 @@ public class DoblementeEnlazada <E> extends Lista <E>{
 	public boolean contains(E value) { 
 		int i = 0;
 		NodoDoble<E> temp = head;
-		while (i<size()){
+		while (i<size() && head != null){
 			if (temp.valor == value){
 				return true;
 			}

@@ -62,6 +62,20 @@ public class ArraylistTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
+	
+	public void testPeekFallado() throws Exception {
+		ap.push(1);
+		ap.push(2);
+		ap.push(3);
+		ap.push(4);
+		try{
+			//El valor esperado es 3
+			assertEquals(3,ap.peek(),0);
+		}catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public void testSize() {
 		ap.push(1);

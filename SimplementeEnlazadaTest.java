@@ -24,14 +24,14 @@ public class SimplementeEnlazadaTest {
 	}
 	
 	@Test
-	public void testGetLast() {
+	public void testGetLastFallado() {
 		se.addLast(2);
 		se.addLast(5);
 		se.addLast(4);
 		se.addLast(6);
 		//Agreangdo dos valores a la lista. Se verifica cual es el ultimo valor
 		int gLast = se.getLast();
-		assertEquals(6, gLast,0);
+		assertEquals(5, gLast,0);
 		
 	}
 	
@@ -123,8 +123,6 @@ public class SimplementeEnlazadaTest {
 	}
 	
 	
-	
-	
 	@Test
 	public void testSize() {
 		se.push(1);
@@ -132,4 +130,11 @@ public class SimplementeEnlazadaTest {
 		
 	}
 	
+	@Test
+	public void testSizeFallado() {
+		se.push(1);
+		se.push(2);
+		assertEquals(1,se.size(),0);
+		
+	}
 }

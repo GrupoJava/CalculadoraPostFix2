@@ -20,16 +20,28 @@ public class DoblementeEnlazadaTest {
 		de.addLast(2);
 		de.addLast(4);
 		//Agregando dos valores a la lista. Se verifica que haya sido agregado al final
-		assertEquals(2, de.getLast(),0);		
+		assertEquals(4, de.getLast(),0);		
 	}
 	
 	@Test
 	public void testGetLast() {
 		de.addLast(2);
+		de.addLast(3);
 		de.addLast(5);
 		//Agreangdo dos valores a la lista. Se verifica cual es el ultimo valor
 		int gLast = de.getLast();
-		assertEquals(2, gLast,0);
+		assertEquals(5, gLast,0);
+		
+	}
+	
+	@Test
+	public void testGetLastFallado() {
+		de.addLast(2);
+		de.addLast(3);
+		de.addLast(5);
+		//Agreangdo dos valores a la lista. Se verifica cual es el ultimo valor
+		int gLast = de.getLast();
+		assertEquals(3, gLast,0);
 		
 	}
 	
@@ -50,7 +62,20 @@ public class DoblementeEnlazadaTest {
 		de.addLast(30);
 		de.addLast(50);
 		
-		if(de.contains(30))
+		if(de.contains(25))
+			assertEquals(0,0,0);
+		else
+			assertEquals(1,0,0);
+	}
+	
+	@Test
+	public void testContainsFallado() {
+		de.addLast(1);
+		de.addLast(25);
+		de.addLast(30);
+		de.addLast(50);
+		
+		if(de.contains(20))
 			assertEquals(0,0,0);
 		else
 			assertEquals(1,0,0);
@@ -86,9 +111,9 @@ public class DoblementeEnlazadaTest {
 		de.push(3);
 		
 		try {
-			assertEquals(1,de.pop(),0);
-			assertEquals(2,de.pop(),0);
 			assertEquals(3,de.pop(),0);
+			assertEquals(2,de.pop(),0);
+			assertEquals(1,de.pop(),0);
 			
 			if (de.isEmpty())
 				assertEquals(0,0,0);
