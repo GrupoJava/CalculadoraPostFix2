@@ -80,10 +80,8 @@ public class Circular<E> extends Lista<E>{
 		Nodo<E> temp = new Nodo<E>(x);
 		
 		if (ultimo == null){
-			
 			ultimo = temp;
 			ultimo.setNext(ultimo);
-			
 		}
 		else
 		{
@@ -113,8 +111,15 @@ public class Circular<E> extends Lista<E>{
 	}
 
 	public void addLast(E value) {
-		
-		
+		Nodo<E> finger;
+		finger = ultimo;
+		for(int i=0; i==cont; i++){
+			if(finger.getNext()!=null)
+				finger=finger.getNext();
+		}
+		Nodo<E> temporal=new Nodo<E>(value); 
+		finger.setNext(temporal);
+		temporal.setNext(ultimo);
 	}
 
 
