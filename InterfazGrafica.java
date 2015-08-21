@@ -173,6 +173,11 @@ public class InterfazGrafica {
 			        } 
 				}else if(a.getSource()==buttonCalcular){
 					try {
+						if(metodo==1 || metodo==2){
+							calculadora.seleccionarMetodo(metodo);
+						}else{
+							calculadora.seleccionMetodoLista(metodo);
+						}
 						calculadora.seleccionarMetodo(metodo);
 						calculadora.readFile(file.getAbsolutePath());
 						String metodoUtilizado= null;

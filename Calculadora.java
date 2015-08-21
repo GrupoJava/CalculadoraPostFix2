@@ -121,6 +121,10 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 	 * 				 el usario para realizar la operacion postfix
 	 * @since Hoja de Trabajo 4 
 	 */
+	/*
+	 * 
+	 * Factory para la seleccion de ArrayList y Vector
+	 * */
 	public void seleccionarMetodo(int metodo) {
 		switch(metodo){
 		case 1:
@@ -129,6 +133,14 @@ public class Calculadora<P> implements ADTCalculadora<P>{
 		case 2:
 			pila= new MVector<Integer>();	
 			break;
+		}
+	}
+	/*
+	 * 
+	 * Factory para la seleccion de Listas
+	 * */
+	public void seleccionMetodoLista(int metodo){
+		switch(metodo){
 		case 3:
 			pila = new SimplementeEnlazada<Integer>();
 			break;
