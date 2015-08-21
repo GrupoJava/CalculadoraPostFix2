@@ -27,7 +27,7 @@ import java.util.Vector;
  *
  * @param <Integer> para recibir datos numéricos
  */
-public class MVector<Integer> extends Pila<Integer> {
+public class MVector <Integer> extends Pila<Integer> {
 	
 	private Vector <Integer> vector;
 	

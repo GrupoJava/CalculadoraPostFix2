@@ -46,7 +46,6 @@ public abstract class Lista<E> extends Pila<E>{
 	public abstract E getLast();
 	
 	
-	
 	/**
 	 * Este método realiza un recorrido por la lista para verificar si
 	 * cierto valor está contenido dentro de la lista.

@@ -19,6 +19,7 @@
  *
  * @param <E>
  */
+
 public class SimplementeEnlazada<E> extends Lista<E>{
 	
 	private Nodo<E> head=null;

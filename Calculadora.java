@@ -38,7 +38,7 @@ import java.io.IOException;
  * @param <P> para tipo de datos String.
  */
 public class Calculadora<P> implements ADTCalculadora<P>{
-	private String MyStr;
+	public String MyStr;
 	private Pila<Integer> pila;
 	private Integer op1;
 	private Integer op2;

@@ -61,7 +61,7 @@ public class Arraylist<E> extends Pila<Integer> {
 	@Override
 	public Integer pop() throws Exception {
 		if (arrayList.isEmpty())
-			throw new Exception("Vector vacio!");
+			throw new Exception("Arraylist vacio!");
 		else
 			return arrayList.remove(arrayList.size()-1);
 	}
