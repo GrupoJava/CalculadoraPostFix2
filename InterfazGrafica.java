@@ -175,7 +175,25 @@ public class InterfazGrafica {
 					try {
 						calculadora.seleccionarMetodo(metodo);
 						calculadora.readFile(file.getAbsolutePath());
-						textArea.setText(String.valueOf("El resultado final de su operacion es: " +calculadora.calcular()));
+						String metodoUtilizado= null;
+						switch(metodo){
+						case 1:
+							metodoUtilizado= " ArrayList";
+							break;
+						case 2:
+							metodoUtilizado= " Vector";	
+							break;
+						case 3:
+							metodoUtilizado= " Lista Simplemente Enlazada";
+							break;
+						case 4:
+							metodoUtilizado= " Lista Dobllemente Enlazada";
+							break;
+						case 5:
+							metodoUtilizado= " Lista Circular";
+							break;
+						}
+						textArea.setText(String.valueOf("El resultado final de su operacion es: " +calculadora.calcular()+" utilanzo"+"\n"+" el metodo"+metodoUtilizado));
 					} catch ( Exception e) {
 						e.printStackTrace();
 					}

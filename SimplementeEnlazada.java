@@ -100,7 +100,6 @@ public class SimplementeEnlazada<E> extends Lista<E>{
 
 	@Override
 	public void push(E x) {
-		System.out.println("VALOR ENTRANDO"+x);
 		Nodo<E> temporal = head;
 		head = new Nodo<E>(x) ;
 		head.setNext(temporal);
@@ -109,7 +108,6 @@ public class SimplementeEnlazada<E> extends Lista<E>{
 
 	@Override
 	public E pop() throws Exception {
-		System.out.println(head);
 		Nodo <E> temp = head;
 		if(head!=null && head.getNext()!=null){
 			head = head.getNext();
